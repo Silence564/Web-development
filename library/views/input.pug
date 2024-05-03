@@ -1,0 +1,16 @@
+extends main
+
+block content
+    .container
+        .container_hat
+            img(src="https://cdn3.iconfinder.com/data/icons/education-flat-5/614/206_-_Books-1024.png").book_img
+            h1.name= title
+        .gretting
+            img(src="https://sun9-77.userapi.com/impf/V4gr1sG99vwHdz_3sLEEdVeXOzDEddXFYP-Fwg/WDW-NRvkSXE.jpg?size=1920x768&quality=95&crop=0,56,2560,1022&sign=26aa2b52755ad51d1bff17fc064ef6bf&type=cover_group").welcome
+            .gretting1 
+                span Добро пожаловать 
+                br
+                span в мир книг!
+        .container_down
+                form(action="/library" method="GET")
+                    button(type="Submit").button_enter Войти

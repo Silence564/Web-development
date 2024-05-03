@@ -1,0 +1,33 @@
+extends main
+
+block content
+    script(src = "/ajax.js")
+    .container
+        .container_hat
+            img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Edit_font_awesome.svg/2048px-Edit_font_awesome.svg.png").book_img
+            h2.name Редактировать
+            a(href= "/library").rename Вернуться назад
+            -var bookId = ID
+        form(action= bookId method="POST")
+            table.editor
+                tr
+                    th Название
+                    th Автор
+                    th Год выпуска
+                    th Издательство
+                    th Возраст
+                    th Аннотация
+                tr
+                    th
+                        input(name="name" ).table_input
+                    th
+                        input(name="author" ).table_input
+                    th
+                        input(name="year" type="date" ).table_input
+                    th
+                        input(name="publishing_house").table_input
+                    th
+                        input(name="limitation").table_input
+                    th 
+                        input(name="annotation").table_input
+            button(type="submit").button_down1 Внеcти изменения

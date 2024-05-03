@@ -1,0 +1,67 @@
+extends  main
+
+block content
+    if if_msg === true
+        .window#id01
+            .container_window
+                span(onclick="document.getElementById('id01').style.display='none'"
+                    class="close_window") &#10006;
+                p.text_window= msg
+    .container
+        .container_hat
+            img(src="https://cdn3.iconfinder.com/data/icons/education-flat-5/614/206_-_Books-1024.png").book_img
+            h1.name= "forever books"
+            a(href= "/library").rename Вернуться назад
+        .container_medium
+            .cover
+                img(src= photo).cover_img
+            .right_column
+                .inLibrary
+                    if in_library === "В наличии"
+                        p.truee #{in_library}
+                    else
+                        p.truee1 #{in_library}
+                        p.info_more Читатель: #{person}
+                        p.info_more Дата возврата: #{date_return}
+                .info
+                    p Название: #{name}
+                    p.info1 Автор: #{author}
+                    p.info1 Год выпуска: #{year}
+                    p.info1 Издательство: #{publishing_house}
+                    p.info1 Возраст: #{limitation}
+        .info_annotation
+            p.truee2 Аннотация: 
+            p.annotation #{annotation}
+        -var book_id = ID
+        .container_in_library
+            if in_library === "Нет в наличии"
+                form(action="back/"+ book_id method="POST")
+                    button( type="submit").button_down Вернуть книгу
+            else
+                    button(type="submit" disabled).button_down Вернуть книгу
+
+            form(action="editor/"+book_id) 
+                button(type="submit").button_down Редактировать
+            
+            if in_library === "В наличии"
+                button(class ="button_down" 
+                    onclick="document.getElementById('id01').style.display='block'") Взять книгу
+
+                div(id= "id01" class="window1" style= "display:none")
+                    .container_window1
+                        header(class="w3-container w3-light-green")
+                            span(class="close_window"
+                                onclick="document.getElementById('id01').style.display='none'") &#10006;
+                            h2.nameV Взять книгу
+                            .forma
+                                form(action="read/"+book_id method="POST")
+                                    p.nameP ФИО читателя
+                                        input(required name="name").knop2
+                                    p.nameP Дата возврата
+                                        input(required name="date_return" type="date").knop2
+                                    p.nameP
+                                    button(class="knop1" type="submit") Взять
+            else
+                    button(class="w3-button w3-lime" type="submit" disabled).button_down Взять книгу
+            
+            
