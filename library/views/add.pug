@@ -1,0 +1,38 @@
+extends main
+
+block content
+    .container 
+        .container_hat
+            img(src="https://cdn3.iconfinder.com/data/icons/education-flat-5/614/206_-_Books-1024.png").book_img
+            h1.name= "forever books"
+            a(href= "/library").rename Вернуться назад
+    form(action="new" method="POST")
+        table.editor
+            tr
+                th Обложка
+                th Номер
+                th Название
+                th Автор
+                th Год выпуска
+                th Издательство
+                th Возраст
+                th Аннотация
+            tr
+            
+                th 
+                    input(name="photo").table_input1
+                th
+                    input(required name="id").table_input1
+                th
+                    input(required name="name").table_input1
+                th
+                    input(required name="author").table_input1
+                th
+                    input(required type="date" name="year").table_input1
+                th
+                    input(required name="publishing_house").table_input1
+                th
+                    input(required name="limitation").table_input1
+                th
+                    input(required name="annotation").table_input1
+        button.button_down1 Добавить

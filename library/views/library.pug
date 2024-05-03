@@ -1,0 +1,50 @@
+extends main
+
+block content
+    script(src = "/ajax.js")
+
+    if if_msg === true
+        .window#id01
+            .container_window
+                span(onclick="document.getElementById('id01').style.display='none'"
+                    class="close_window") &#10006;
+                p.text_window= msg
+
+    .container
+        .container_hat
+            img(src="https://cdn3.iconfinder.com/data/icons/education-flat-5/614/206_-_Books-1024.png").book_img
+            h1.name= "forever books"
+
+        .gretting
+            img(src="https://klike.net/uploads/posts/2022-12/1672030915_2-2.jpg").welcome
+            .gretting2 
+                span  Книга — великая вещь, 
+                br
+                span пока человек умеет ею пользоваться.
+                br
+                span А. Блок
+        .container_filter
+            span.filter Фильтры: 
+            button(onclick='all_books(this)' id="all_books" class="filter1") Все книги
+            button(onclick='in_lib(this)' id="in_lib" class="filter1") Книги в наличии
+            button(onclick='date_return(this)' id="dateReturn" class="filter1") Срок сдачи
+        .container_book
+            for item in books
+                .book(id = item.id)
+                    a(href = "card/"+item.id) 
+                        img(src= item.photo).image_cover
+                    .area
+                        if item.in_library === "В наличии"
+                            span.in_library_true #{item.in_library}
+                        else 
+                            span.in_library_false #{item.in_library}
+                        .text-ex-tooltip
+                            form(action="card/" + item.id method ="POST")
+                                button.delete &#128465;
+                            .tooltip-content
+                                span Удалить 
+                                br
+                                span книгу
+        .container_down1
+            a(href = "/add").add Добавить книгу
+            a(href="#top").up &#8657;
