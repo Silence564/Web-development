@@ -1,0 +1,35 @@
+img {
+    height: 1200px !important;
+}
+
+.buttons{
+    display: flex;
+    margin-left: 39%;
+}
+
+.knop1{
+    margin-left: 5%;
+}
+
+.form-check-input{
+    margin-left: 30px !important;
+    width: 60px !important;
+    height: 30px !important;
+}
+
+.form-check-label{
+    margin-left: 100px !important;
+    font-size: 30px;
+}
+
+.text {
+    font-size: 45px !important;
+}
+
+.card-body{
+    margin-bottom: 2% !important;
+}
+
+.hat{
+    font-size: 45px;
+}
