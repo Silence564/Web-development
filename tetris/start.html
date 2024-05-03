@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TETRIS</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bungee&family=Luckiest+Guy&family=Ultra&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <div class="grid">
+            <canvas width="320" height="640" id="board" class="game-board"></canvas>
+            <div class="right-column">
+                <div>
+                    <h1><font size="30">TETRIS</font></h1>
+                    <p>Score: <span id="score">0</span></p>
+                    <p>Lines: <span id="lines">0</span></p>
+                    <p>Level: <span id="level">1</span></p>
+                </div>
+                <p>HEY,   <span id="name"></span></p>
+                <button id="button" class="play-button">play</button>
+                <form action="index.html"><button id="button1" class="reset-button">reset</button></form>
+                <canvas width="100" height="100" id="figura-next" class="figura"></canvas>
+            </div>
+            <div class="rr-column">
+                <canvas  width="640" height="640" id="record" class="table-record"></canvas>
+            </div>
+        </div>
+        <script src="./app.js"></script>    
+</body>
+</html>
