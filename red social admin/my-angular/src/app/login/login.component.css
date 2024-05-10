@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/amaticsc/v26/TUZyzwprpvBS1izr_vO0DQ.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Pangolin';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pangolin/v11/cY9GfjGcW0FPpi-tWPfK.ttf) format('truetype');
+}
+
+* {
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.log{
+    border: 8px solid #021AF3;
+    background: #F5F5F5;
+    width: 383px;
+    border-radius: 30px;
+    height: 250px;
+    margin-left: 36%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.button{
+    border-radius: 30px;
+    background: #021AF3; 
+    width: 200px;
+    height: 60px;  
+    color:white; 
+    cursor: pointer;
+    font-size: 45px;
+}
+
+.input{
+    width: 300px;
+    height: 50px; 
+    font-size: 50px;  
+}
+
+.button:hover{
+    background-color: #25AED9;
+}

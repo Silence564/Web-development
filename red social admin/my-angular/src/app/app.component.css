@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/amaticsc/v26/TUZyzwprpvBS1izr_vO0DQ.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Pangolin';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pangolin/v11/cY9GfjGcW0FPpi-tWPfK.ttf) format('truetype');
+}
+
+* {
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.logo{
+    width: 441px;
+    height: 230px;
+    margin-bottom: -1%;
+}
+
+.nam{
+    font-size: 60px;
+    color:black;
+}
+
+.knop{
+    border-radius: 30px;
+    background: #021AF3; 
+    width: 393px;
+    height: 83px;   
+    cursor: pointer;
+    margin-left: 36%
+}
+
+.knop:hover{
+    background-color: #25AED9;
+}
+
+.button{
+    text-decoration: none;
+    font-size: 50px;
+    color: white;
+}
+
+.panel{
+    border: 8px solid #021AF3;
+    background: #F5F5F5;
+    width: 99%;
+    height: 100%;
+}
+
+.body{
+    background-color: white;
+}
+.panel{
+    height: 100%; 
+    padding-top: 5vh; 
+    text-align: center;
+}
