@@ -1,0 +1,38 @@
+extends main        
+        
+block content
+    link(rel="stylesheet" href="/css/news.css")
+    if if_msg === true
+        .window#id01
+            .container_window
+                span(onclick="start_config()"
+                    class="close_window") &#10006;
+                p.text_window= msg    
+    .container#id05     
+        header
+            span(onclick="start_config1()")#myModal__close &times;
+            h2 Заблокировать новость
+        p Вы действительно хотите заблокировать новость?
+        .return
+            button(onclick="start_config1()")#myModal__close1 Нет
+            form(name="nForm" method="POST")
+                button(type="submit")#myModal__close1 Да
+    div#tables  
+        for new_ele in news 
+            if (new_ele.id)
+                for item in persons
+                    if (new_ele.id == item.id && new_ele.status != "заблокирован" && item.status !="заблокирован") 
+                        .block6 
+                            .block_person
+                                .lenta_info
+                                    - var way = item.photo
+                                    img(src=way).avatar
+                                    p.name_news #{item.nameN}  
+                                    button(value= new_ele.number onclick="block(\"" + new_ele.number + "\")").button_block &#128274;
+                                .info_news
+                                    if (new_ele.text != 0)
+                                        p.text_new #{new_ele.text} 
+                                    if (new_ele.image != 0) 
+                                        img(src=new_ele.image width="200").photo_news
+    #myOverlay
+    script(src="/gulp_script/news.js")

@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title= title
+        script(src="jquery/jquery.min.js")
+        link(rel="stylesheet" href="/css/main.css")
+    body
+        .block1
+            .block3
+                .hat
+                    img(src="https://cdn.dribbble.com/users/488402/screenshots/2886180/comp_1_1.gif").logo
+                    h1.heading= "CHEETAH NETWORK" 
+                .colomn
+                    form(action="/" method="GET")
+                        button.button_main#main Главная страница
+                    form(action="/friends" method="GET")
+                        button.button_main#friends Друзья
+                    form(action="/new" method="GET")
+                        button.button_main#news Новости
+            block content

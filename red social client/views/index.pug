@@ -1,0 +1,87 @@
+extends main        
+        
+block content
+    link(rel="stylesheet" href="/css/network.css")
+    if if_msg === true
+        .window#id01
+            .container_window
+                span(onclick="start_config()"
+                    class="close_window") &#10006;
+                p.text_window= msg        
+    
+    .container#id02
+        .formEd
+            header
+                span(onclick="start_config1()")#myModal__close &times;
+                h2 Редактировать
+            .return
+                form(name="pForm" method="POST")
+                    table.tbl
+                        tr
+                            th ФИО:
+                            th
+                                input(name = "nameN").innn
+                        tr
+                            th Почта:
+                            th
+                                input(name = "email").innn
+                        tr 
+                            th Дата рождения:
+                            th 
+                                input(type="date" name = "date").innn
+                        tr
+                            th Аватар:
+                            th
+                                input(name= "photo").innn
+                        tr 
+                            th Статус:
+                            th 
+                                input(name= "status").innn
+                        tr 
+                            th Роль:
+                            th
+                                input(name = "role").innn
+                    p
+                        p
+                            button(type="submit")#myModal__close1 ok
+                    p
+    .container#id04     
+        header
+            span(onclick="start_config1()")#myModal__close &times;
+            h2 Заблокировать пользователя
+        p Вы действительно хотите заблокировать пользователя?
+        .return
+            button(onclick="start_config1()")#myModal__close1 Нет
+            form(name="nForm" method="POST")
+                button(type="submit")#myModal__close1 Да
+    
+    .block_persons#tables
+        for item in persons
+            .block2
+                .block_person
+                    - var way = item.photo
+                    img(src=way).avatar
+                    .block5
+                        .info_block
+                            .table_info
+                                table#info
+                                    tr
+                                        th ФИО: 
+                                        th #{item.nameN}
+                                    tr
+                                        th Почта: 
+                                        th #{item.email}
+                                    tr
+                                        th Дата рождения: 
+                                        th #{item.date}
+                                    tr
+                                        th Статус: 
+                                        th #{item.status}
+                                    tr
+                                        th Роль: 
+                                        th #{item.role}
+                        .button_info
+                            button(value=id onclick="edit(\""+ item.nameN + "\", \"" + item.email + "\", \"" + item.id + "\", \"" + item.date + "\", \"" + item.photo + "\", \"" + item.status + "\", \"" + item.role + "\")").button2 редактировать
+                            button(value=id onclick="block(\""+ item.id + "\")").button1 Заблокировать 
+    #myOverlay
+    script(src="/gulp_script/network.js")

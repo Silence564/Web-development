@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Pangolin&display=swap');
+@color1: #021AF3;
+@color2: #F5F5F5;
+@color3: #25AED9;
+
+*{
+    font-family: 'Amatic SC', sans-serif;
+}
+
+body{
+    background-color: @color2;
+}
+
+.block1{
+    display: flex;
+    flex-direction: row;
+}
+
+.block3{
+    border: 8px solid @color1;
+    background: @color2;
+    height: auto;
+    width: 470px;
+}
+
+.logo{
+    width: 441px;
+    height: 230px;
+}
+.heading{
+    color: #000;
+    width: 470px;
+    margin-left: 5%;
+    text-align: centre;
+    font-size: 90px;
+    font-weight: 400;
+}
+
+.colomn{
+    z-index: 3;
+}
+
+.button_main{
+    cursor: pointer;
+    width: 393px;
+    height: 83px;
+    border-radius: 30px;
+    background: @color1;
+    color: @color2;
+    text-align: centre;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    &:hover{
+        cursor: pointer;
+        background: @color3;
+    }
+}
+.rename{
+    cursor: pointer;
+    width: 393px;
+    height: 83px;
+    border-radius: 30px;
+    background: @color1;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    &:hover{
+        cursor: pointer;
+        background-color: @color3;
+    }
+}
+
+.button_main[disabled]{
+    cursor: not-allowed;
+    background-color: @color3;
+}
+.rename[disabled]{
+    cursor: not-allowed;
+    background-color: @color3;
+}
+
+
+.text{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: @color2;
+    line-height: 80px;
+}

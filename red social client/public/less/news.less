@@ -1,0 +1,144 @@
+@color1: #021AF3;
+@color2: #F5F5F5;
+@color3: #25AED9;
+@color4: #021AF3;
+
+.block6{
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border: 8px solid @color1;
+    background: @color2;
+    width: 900px;
+    height: 960px;
+}
+
+.block_person{
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: column;
+}
+.lenta_info{
+    display: flex;
+    flex-direction: row;
+    height: 168px;
+    border: 6px solid @color4;
+    height: 168px;
+    width: 800px;
+    margin: 5px 5px;
+}
+.avatar{
+    width: 132px;
+    height: 144px;
+    border-radius: 20px;
+    margin: 8px 8px;
+}
+.name_news{
+    font-size:70px;
+    margin-top: 4%;
+    color: #000;
+    text-align: center;
+}
+
+.button_block{
+    width: 139px;
+    height: 117px;
+    margin-top: 3%;
+    border-radius: 30px;
+    background: @color1;
+    font-size: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0.6em;
+    &:hover{
+        cursor: pointer;
+        background: @color3;
+    }
+}
+
+.info_news{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text_new{
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+}
+
+.photo_news{
+    width: auto;
+    height: auto;
+}
+
+.window{
+    width: 500px;
+    height: 500px; /* Рaзмеры дoлжны быть фиксирoвaны */
+    border-radius: 5px;
+    border: 8px black solid;
+    background: #fff;
+    position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+    top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+    left: 50%; /* пoлoвинa экрaнa слевa */
+    margin-top: -250px;
+    margin-left: -250px; /* oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo */
+    opacity: 1; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+    z-index: 9999; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+    padding: 20px 10px;
+    font-size: 60px;
+    text-align: center;
+    .close_window {
+        width: 21px; height: 21px;
+        position: absolute;
+        font-size: 29px;
+        top: 1px; right: 11px;
+        cursor: pointer;
+        display: block;
+    }
+}
+
+#id05 {
+    width: 298px; height: 218px;
+    padding: 18px 9px;
+    border-radius: 4px;
+    background: #fafafa;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    display: none;
+    opacity: 0;
+    z-index: 38;
+    text-align: center;
+    #myModal__close {
+        width: 21px; height: 21px;
+        position: absolute;
+        font-size: 60px;
+        top: 1px; right: 11px;
+        cursor: pointer;
+        display: block;
+    }
+}
+
+#myModal__close1 {
+    width: 120px; height: 75px;
+    font-size: 60px;
+    text-align: center;
+    cursor: pointer;
+}    
+.return{
+    display: flex;
+    flex-direction: row;
+    margin: 0 6%;
+}
+#myOverlay {
+    z-index: 37;
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    cursor: pointer;
+    display: none;
+}
+
+
