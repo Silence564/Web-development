@@ -1,0 +1,20 @@
+<hr class="line">
+<div class="block">
+  <div class="user_photo">
+    <img [src]=photo class="image">
+  </div>
+  <div class="user_info">
+    <p class="string">Имя пользователя: {{nameN}}</p>
+    <p class="string">Почта: {{email}}</p>
+    <p class="string">Дата рождения: {{date}}</p>
+    <p class="string">Статус: {{status}}</p>
+    <p class="string">Роль: {{role}}</p>
+  </div>
+</div>  
+  <div>
+    <nav class="navigation">
+      <p class="knop1"><a routerLink="../news" class="button">Новости</a></p>
+      <p *ngIf="is_admin" class="knop"><a  href="http://localhost:3000" class="button">Управление</a></p>
+    </nav>
+  </div>
+  

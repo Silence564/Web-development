@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/amaticsc/v26/TUZyzwprpvBS1izr_vO0DQ.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Pangolin';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pangolin/v11/cY9GfjGcW0FPpi-tWPfK.ttf) format('truetype');
+}
+
+* {
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.line{
+    border: 5px solid #021AF3;
+}
+
+.block{
+    display: flex;
+}
+.image{
+    width: 392px;
+    height: 420px;
+}
+.user_photo{
+    margin-left: 6%;
+    margin-top: 1%;
+}
+.user_info{
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.string{
+    font-size: 50px;
+    margin-bottom: -10%;
+}
+
+.navigation{
+    display: flex;
+}
+
+.knop{
+    border-radius: 30px;
+    background: #021AF3; 
+    width: 393px;
+    height: 83px;   
+    cursor: pointer;
+    margin-left: 22%;
+}
+
+.knop:hover{
+    background-color: #25AED9;
+}
+
+.knop1{
+    border-radius: 30px;
+    background: #021AF3; 
+    width: 393px;
+    height: 83px;   
+    cursor: pointer;
+    margin-left: 10%;
+}
+
+.knop1:hover{
+    background-color: #25AED9;
+}
+.button{
+    text-decoration: none;
+    font-size: 50px;
+    color: white;
+    width: 393px;
+    height: 83px; 
+}

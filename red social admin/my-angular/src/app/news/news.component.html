@@ -1,0 +1,19 @@
+<hr class="line">
+<div class="return">
+    <button class="button" (click)="go_to_main()">Вернуться назад</button>
+</div>
+  
+  <div class="add_news">
+    <p><input class="input" placeholder="Текст (чтобы пропустить введите ноль)" [(ngModel)] = "news_text"></p>
+    <p><input class="input" placeholder="Фотография (чтобы пропустить введите ноль)" [(ngModel)] = "news_photo"></p>
+    <button class="button" (click)="add_news()">Добавить новость</button>
+  </div>
+  <hr class="line">
+  <div class="news">
+    <body class="block1" *ngFor="let n of news_list; let i = index">
+      <p class="info">{{n.user_name}}</p>
+      <p class="info">{{n.news_text}}</p>
+      <p><img [src]="n.news_photo" class="photo"></p>
+    </body>
+  </div>
+  
