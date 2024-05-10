@@ -1,0 +1,36 @@
+extends main        
+        
+block content
+    link(rel="stylesheet" href="/css/network.css")
+    div#tables
+        for f in friend 
+            for it in persons 
+                if (f.id == it.id)
+                    h1.zag Друзья #{it.nameN}
+            if(f.id)
+                for idF in f.friends_id
+                    for item in persons
+                        if (idF == item.id && item.status !="заблокирован")
+                            .block2
+                                .block_person 
+                                    - var way = item.photo
+                                    img(src=way width="200").avatar
+                                    .block5
+                                        .table_info
+                                            table#info
+                                                tr
+                                                    th ФИО: 
+                                                    th #{item.nameN}
+                                                tr
+                                                    th Почта: 
+                                                    th #{item.email}
+                                                tr
+                                                    th Дата рождения: 
+                                                    th #{item.date}
+                                                tr
+                                                    th Статус: 
+                                                    th #{item.status}
+                                                tr
+                                                    th Роль: 
+                                                    th #{item.role}
+    script(src="/gulp_script/friends.js")

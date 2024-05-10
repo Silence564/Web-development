@@ -1,0 +1,193 @@
+.block_person {
+  margin: 5% 5%;
+  display: flex;
+  flex-direction: row;
+}
+.block2 {
+  margin-left: 1%;
+  margin-bottom: 1%;
+  border: 8px solid #021AF3;
+  background: #F5F5F5;
+  width: 900px;
+  height: 586px;
+}
+.avatar {
+  width: 376px;
+  height: 479px;
+}
+.block5 {
+  display: flex;
+  flex-direction: column;
+}
+.info_block {
+  width: 400px;
+  height: 226px;
+  margin-left: 2%;
+  border: 6px solid #021AF3;
+  background: #F5F5F5;
+}
+.table_info {
+  width: 100%;
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+}
+.button_info {
+  margin: 3% 15%;
+}
+.button1 {
+  width: 300px;
+  height: 83px;
+  text-align: center;
+  color: #F5F5F5;
+  background: #021AF3;
+  border-radius: 30px;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 3%;
+  line-height: normal;
+}
+.button1:hover {
+  cursor: pointer;
+  background: #25AED9;
+}
+.button2 {
+  width: 300px;
+  height: 83px;
+  text-align: center;
+  color: #F5F5F5;
+  background: #021AF3;
+  border-radius: 30px;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.button2:hover {
+  cursor: pointer;
+  background: #25AED9;
+}
+.window {
+  width: 500px;
+  height: 500px;
+  /* Рaзмеры дoлжны быть фиксирoвaны */
+  border-radius: 5px;
+  border: 8px black solid;
+  background: #fff;
+  position: fixed;
+  /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%;
+  /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 50%;
+  /* пoлoвинa экрaнa слевa */
+  margin-top: -250px;
+  margin-left: -250px;
+  /* oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo */
+  opacity: 1;
+  /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 9999;
+  /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px 10px;
+  font-size: 60px;
+  text-align: center;
+}
+.window .close_window {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  font-size: 29px;
+  top: 1px;
+  right: 11px;
+  cursor: pointer;
+  display: block;
+}
+#id04 {
+  width: 298px;
+  height: 218px;
+  padding: 18px 9px;
+  border-radius: 4px;
+  background: #fafafa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  opacity: 0;
+  z-index: 38;
+  text-align: center;
+}
+#id04 #myModal__close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  font-size: 60px;
+  top: 1px;
+  right: 11px;
+  cursor: pointer;
+  display: block;
+}
+#id02 {
+  width: 400px;
+  height: 390px;
+  padding: 18px 9px;
+  border-radius: 4px;
+  background: #fafafa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  opacity: 0;
+  z-index: 38;
+  text-align: center;
+}
+#id02 #myModal__close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  font-size: 80px;
+  top: 1px;
+  right: 11px;
+  cursor: pointer;
+  display: block;
+}
+#myModal__close1 {
+  width: 120px;
+  height: 75px;
+  font-size: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+.return {
+  display: flex;
+  flex-direction: row;
+  margin: 0 6%;
+}
+.tbl {
+  font-size: 30px;
+}
+#myOverlay {
+  z-index: 37;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+.innn {
+  width: 180px;
+  height: 30px;
+  font-size: 30px;
+}
+.zag {
+  margin-left: 1%;
+}
